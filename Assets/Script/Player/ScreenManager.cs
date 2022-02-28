@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScreenManager : MonoBehaviour
 {
-    float countTime = 0;
+    public float countTime = 0;
    
     void Start()
     {

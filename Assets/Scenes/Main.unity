@@ -6201,6 +6201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3d8759e2423214e8542f9e90fccdd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countTime: 0
 --- !u!1 &1622362972
 GameObject:
   m_ObjectHideFlags: 0
@@ -6833,6 +6834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2436cd570c6624abd1432941036a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenManager: {fileID: 1611887628}
 --- !u!65 &1856338630
 BoxCollider:
   m_ObjectHideFlags: 0
