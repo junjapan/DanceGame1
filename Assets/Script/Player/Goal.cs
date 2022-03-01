@@ -23,7 +23,7 @@ public class Goal : MonoBehaviour
     }
 
     void changeScene() {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Dance");
     }
 
     void Start()
