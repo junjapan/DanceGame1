@@ -4,37 +4,20 @@ using UnityEngine;
 
 public class MoveStage : MonoBehaviour
 {
-    Vector3 startPosition;
+    int counter = 0;
+    float move = 0.1f;
 
-    public float amplitude;
-    public float speed;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        startPosition = transform.localPosition;
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //変位を計測
-        float x = amplitude * Mathf.Sin(Time.time * speed);
+        Vector3 p = new Vector3(move, 0, 0);
+        transform.Translate(p);
+        counter++;
 
-        //xを変化させたポジションに再設定
-        transform.localPosition = startPosition + new Vector3(x, 0, 0);
-
-    }
-    /*
-    void OnCollisionEnter(Collision collision)
-    {
-        collision.gameObject.transform.SetParent(this.transform);
+        if (counter == 300)
+        {
+            counter = 0;
+            move *= -1;
+        }
     }
 
-    void OnCollisionExit(Collision collision)
-    {
-        collision.gameObject.transform.SetParent(null);
-    }
-    */
 }
