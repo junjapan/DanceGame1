@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class MoveStageOnPlayer : MonoBehaviour
 {
-    private Rigidbody rb;
+    
     public float upForce = 100f;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            rb.AddForce(new Vector3(0, upForce, 0));
-        }
-    }
-
+    
     void OnCollisionEnter(Collision col)
     {
-        if (transform.parent == null && col.gameObject.name == "MoveStage")
+        if (transform.parent == null &&
+            (col.gameObject.name == "MoveStage"
+            || col.gameObject.name == "MoveStage1"
+            || col.gameObject.name == "MoveStage2"
+            || col.gameObject.name == "MoveStage3"
+            || col.gameObject.name == "MoveStage4"))
         {
             var emptyObject = new GameObject();
             emptyObject.transform.parent = col.gameObject.transform;
@@ -32,7 +24,12 @@ public class MoveStageOnPlayer : MonoBehaviour
 
     void OnCollisionExit(Collision col)
     {
-        if (transform.parent != null && col.gameObject.name == "MoveStage")
+        if (transform.parent != null &&
+            (col.gameObject.name == "MoveStage"
+            || col.gameObject.name == "MoveStage1"
+            || col.gameObject.name == "MoveStage2"
+            || col.gameObject.name == "MoveStage3"
+            || col.gameObject.name == "MoveStage4"))
         {
             transform.parent = null;
         }
