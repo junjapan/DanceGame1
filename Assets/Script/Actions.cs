@@ -9,7 +9,7 @@ public class Actions : MonoBehaviour
     float countTime = 0;
 
     public GameObject player;
-    public GetMotionList motions;
+    GetMotionList motions;
 
     void Start()
     {
