@@ -31,18 +31,6 @@ public class Actions : MonoBehaviour
 
             GetComponent<Text>().text = string.Join("\n", array);
         }
-        Debug.Log(string.Join("\n", actions));
-
-
-        //得たモーションをデバッグ表示する。
-
-        Debug.Log(string.Join(",", actions));
-
-        Debug.Log(System.Tuple.Create(actions));
-
-        Debug.Log("Guess What");
-
-
     }
 
 
