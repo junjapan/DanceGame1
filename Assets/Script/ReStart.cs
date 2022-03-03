@@ -11,5 +11,10 @@ public class ReStart : MonoBehaviour
         {
             SceneManager.LoadScene("Title");
         }
+
+        if (other.gameObject.tag == "Ball")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
