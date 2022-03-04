@@ -15,10 +15,13 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             isGoal = true;
-            if (PlayerPrefs.GetFloat("BestTime",9999f) > screenManager.countTime) {
-                PlayerPrefs.SetFloat("BestTime", screenManager.countTime);
-            }
-            Invoke("changeScene", 2.0f);
+//            if (PlayerPrefs.GetFloat("BestTime",9999f) > screenManager.countTime) {
+//                PlayerPrefs.SetFloat("BestTime", screenManager.countTime);
+              if (PlayerPrefs.GetFloat("BestTime", 9999f) > screenManager.getCountTime())
+              {
+                  PlayerPrefs.SetFloat("BestTime", screenManager.getCountTime());
+              }
+                Invoke("changeScene", 2.0f);
         }
     }
 
