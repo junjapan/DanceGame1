@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CinemachineCustomAxis : MonoBehaviour
 {
-    public bool xInversion, yInversion;
+    public bool xInversion = false;
+    public bool yInversion;
 
     void Start() {
         Cinemachine.CinemachineCore.GetInputAxis = GetAxisCustom;
