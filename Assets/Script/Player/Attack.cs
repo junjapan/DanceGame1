@@ -24,7 +24,8 @@ public class Attack : MonoBehaviour
         animator = GetComponent<Animator>();
         cc = GetComponent<CharacterController>();
         velocity = Vector3.zero;
-        handCollider = GameObject.Find("Character1_LeftHand").GetComponent<SphereCollider>();
+//        handCollider = GameObject.Find("Character1_LeftHand").GetComponent<SphereCollider>();
+        handCollider = GameObject.Find("Character1_RightHand").GetComponent<SphereCollider>();
         audioSource = GetComponent<AudioSource>();
     }
 
