@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToTitle : MonoBehaviour
+public class GoToBonusScene : MonoBehaviour
 {
     float step_time;    //経過時間カウント用
 
@@ -19,10 +19,10 @@ public class GoToTitle : MonoBehaviour
         //経過時間をカウント
         step_time += Time.deltaTime;
 
-        //13秒後に画面遷移(Titleへ移動）
-        if(step_time >= 13.0f)
+        //25秒後に画面遷移(Titleへ移動）
+        if (step_time >= 25.0f)
         {
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("BonusScene");
         }
     }
 }
