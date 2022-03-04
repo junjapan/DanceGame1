@@ -23,7 +23,8 @@ public class GetMotionList : MonoBehaviour
     }
 
     void Start() {
-        handCollider = GameObject.Find("Character1_LeftHand").GetComponent<SphereCollider>();
+//        handCollider = GameObject.Find("Character1_LeftHand").GetComponent<SphereCollider>();
+        handCollider = GameObject.Find("Character1_RightHand").GetComponent<SphereCollider>();
     }
 
     void Update() {
