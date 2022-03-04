@@ -16,20 +16,20 @@ public class GetMotionPlay : MonoBehaviour
            !Input.GetKey(KeyCode.DownArrow) &&
            !Input.GetKey(KeyCode.RightArrow) &&
            !Input.GetKey(KeyCode.LeftArrow) &&
-           (!getMotionList.anim.GetBool("Dance01") ||
-            !getMotionList.anim.GetBool("Dance02")
-            )
-           &&
+//           (!getMotionList.anim.GetBool("Dance01") ||
+//            !getMotionList.anim.GetBool("Dance02")
+//            )
+//           &&
            !Input.GetKey(KeyCode.Space)
            ) {
             foreach (string s in getMotionList.motionList) {
-                string str = s.Substring(10);
+                string str = s.Substring(10,7);
                 Debug.Log(str);
                 getMotionList.anim.SetBool(str, true);
             }
         } else {
             foreach (string s in getMotionList.motionList) {
-                string str = s.Substring(10);
+                string str = s.Substring(10,7);
                 getMotionList.anim.SetBool(str, false);
             }
         }
