@@ -19,8 +19,8 @@ public class GoToTitle : MonoBehaviour
         //経過時間をカウント
         step_time += Time.deltaTime;
 
-        //35秒後に画面遷移(Titleへ移動）
-        if(step_time >= 35.0f)
+        //45秒後に画面遷移(Titleへ移動）
+        if(step_time >= 45.0f)
         {
             SceneManager.LoadScene("Title");
         }
