@@ -24,7 +24,7 @@ public class GetMotionPlay : MonoBehaviour
            ) {
             foreach (string s in getMotionList.motionList) {
                 string str = s.Substring(10,7);
-                Debug.Log(str);
+//                Debug.Log(str);
                 getMotionList.anim.SetBool(str, true);
             }
         } else {
