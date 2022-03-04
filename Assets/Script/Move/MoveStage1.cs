@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveStage1 : MonoBehaviour
 {
+    /*
     Vector3 startPosition;
 
     public float amplitude;
@@ -26,4 +27,22 @@ public class MoveStage1 : MonoBehaviour
         transform.localPosition = startPosition + new Vector3(0, y, 0);
 
     }
+    */
+
+    int counter = 0;
+    float move = 0.05f;
+
+    void Update()
+    {
+        Vector3 p = new Vector3(0, move, 0);
+        transform.Translate(p);
+        counter++;
+
+        if (counter == 500)
+        {
+            counter = 0;
+            move *= -1;
+        }
+    }
+
 }

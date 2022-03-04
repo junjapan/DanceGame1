@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     bool isGoal;
+    public ScreenManager screenManager;
 
     public bool IsGoal() {
         return isGoal;
@@ -14,12 +15,18 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             isGoal = true;
-            Invoke("changeScene", 2.0f);
+//            if (PlayerPrefs.GetFloat("BestTime",9999f) > screenManager.countTime) {
+//                PlayerPrefs.SetFloat("BestTime", screenManager.countTime);
+              if (PlayerPrefs.GetFloat("BestTime", 9999f) > screenManager.getCountTime())
+              {
+                  PlayerPrefs.SetFloat("BestTime", screenManager.getCountTime());
+              }
+                Invoke("changeScene", 2.0f);
         }
     }
 
     void changeScene() {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Dance");
     }
 
     void Start()
