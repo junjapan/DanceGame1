@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyTeleportation : MonoBehaviour
 {
-    public float moveTime = 3;
+    public float moveTime = 3.0f;
+    float time;
     float vecX;
     float vecZ;
     Vector3 startPosition; 
@@ -12,18 +13,19 @@ public class EnemyTeleportation : MonoBehaviour
     void Start()
     {
         startPosition = gameObject.transform.position;
+        time = moveTime;
     }
 
     void Update()
     {
-        moveTime -= Time.deltaTime;
+        time -= Time.deltaTime;
 
-        if (moveTime <= 0)
+        if (time <= 0)
         {
             vecX = Random.Range(-5.0f, 5.0f);
             vecZ = Random.Range(-5.0f, 5.0f);
             gameObject.transform.position = startPosition + new Vector3(vecX, 0.5f, vecZ);
-            moveTime = 3.0f;
+            time = moveTime;
         }
     }
 }
