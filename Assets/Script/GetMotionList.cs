@@ -8,6 +8,9 @@ public class GetMotionList : MonoBehaviour
     public Animator anim;
     Collider handCollider;
 
+    //エフェクト用
+    public GameObject effectPrefab;
+
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Enemy") {
             Animator animator = other.gameObject.GetComponent<Animator>();
@@ -19,6 +22,16 @@ public class GetMotionList : MonoBehaviour
                 count++;
             }
             Destroy(other.gameObject);
+
+            //エフェクト用
+            if(effectPrefab != null)
+            {
+                Instantiate(
+                    effectPrefab,
+                    other.transform.position,
+                    Quaternion.Euler(transform.forward)
+                 );
+            }
         }
     }
 

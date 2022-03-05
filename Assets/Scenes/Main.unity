@@ -693,6 +693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motionList: []
   anim: {fileID: 0}
+  effectPrefab: {fileID: 453147053563517970, guid: cf74f33bdbf1d7243811598c748b5830,
+    type: 3}
 --- !u!135 &114786711
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3389,7 +3391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660449594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.8, y: 49.8, z: 37.9}
+  m_LocalPosition: {x: 29.8, y: 49.8, z: 36.51}
   m_LocalScale: {x: 7, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 1054276611}
@@ -4585,7 +4587,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916407726}
-  m_LocalRotation: {x: 0.05635661, y: 0.25678656, z: -0.015001048, w: 0.964707}
+  m_LocalRotation: {x: 0.056356613, y: 0.25678656, z: -0.01500105, w: 0.964707}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5068,7 +5070,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.073848516, y: 0.25647214, z: -0.019657066, w: 0.96352583}
+  m_LocalRotation: {x: 0.073848516, y: 0.25647214, z: -0.019657062, w: 0.96352583}
   m_LocalPosition: {x: 29.917171, y: 12.3, z: 41.293972}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_Children: []
@@ -7100,13 +7102,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261961716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d848f1b2f7abb6b4385341c8f7c19d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   motionList: []
   anim: {fileID: 0}
+  effectPrefab: {fileID: 0}
 --- !u!135 &1261961718
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7189,7 +7192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262321419}
-  m_LocalRotation: {x: 0.09136232, y: 0.2560721, z: -0.024318894, w: 0.9620232}
+  m_LocalRotation: {x: 0.09136235, y: 0.25607213, z: -0.024318907, w: 0.9620232}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10662,6 +10665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motionList: []
   anim: {fileID: 0}
+  effectPrefab: {fileID: 0}
 --- !u!1 &1958205293
 GameObject:
   m_ObjectHideFlags: 0
