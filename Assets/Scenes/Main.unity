@@ -502,7 +502,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3426725, y: 1}
+    m_SensorSize: {x: 0.8384926, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6423,7 +6423,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3426725, y: 1}
+    m_SensorSize: {x: 0.8384926, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9305,7 +9305,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3426725, y: 1}
+    m_SensorSize: {x: 0.8384926, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10101,7 +10101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1369123419}
   - component: {fileID: 1369123421}
-  - component: {fileID: 1369123420}
   m_Layer: 0
   m_Name: MiniMapCamera
   m_TagString: Untagged
@@ -10123,14 +10122,6 @@ Transform:
   m_Father: {fileID: 55666565}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!81 &1369123420
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369123418}
-  m_Enabled: 1
 --- !u!20 &1369123421
 Camera:
   m_ObjectHideFlags: 0
@@ -11807,13 +11798,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608754424}
-  m_LocalRotation: {x: 0, y: 0, z: -0.17364825, w: 0.9848078}
-  m_LocalPosition: {x: 67.9, y: 18, z: 36.4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.6, y: -16.5, z: -4.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1240735451}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1608754426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11826,7 +11817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72fdc368e19d0f342b6cae7320b200d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 7739551766636369164, guid: 4180b4953c025d14fb36c4e6ffce1901, type: 3}
+  ball: {fileID: 7739551766636369164, guid: c1263a5633316bc48987987ad11e1be5, type: 3}
 --- !u!1 &1611887624
 GameObject:
   m_ObjectHideFlags: 0
@@ -12054,7 +12045,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3426725, y: 1}
+    m_SensorSize: {x: 0.8384926, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
