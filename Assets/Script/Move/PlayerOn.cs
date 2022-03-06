@@ -15,7 +15,8 @@ public class PlayerOn : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(transform.parent == null && col.gameObject.name == "MoveStage")
+        if(transform.parent == null && 
+            ((col.gameObject.name == "MoveStage") || (col.gameObject.name == "MoveStage5")))
         {
             var emptyObject = new GameObject();
             emptyObject.transform.parent = col.gameObject.transform;
@@ -25,12 +26,8 @@ public class PlayerOn : MonoBehaviour
 
     void OnCollisionExit(Collision col)
     {
-        if(transform.parent != null
-            && col.gameObject.name == "MoveStage"
-            || col.gameObject.name == "MoveStage1"
-            || col.gameObject.name == "MoveStage2"
-            || col.gameObject.name == "MoveStage3"
-            || col.gameObject.name == "MoveStage4")
+        if(transform.parent != null &&
+            ((col.gameObject.name == "MoveStage") || (col.gameObject.name == "MoveStage5")))
         {
             transform.parent = null;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyRandomWalk : MonoBehaviour
 {
-    float chargeTime = 5.0f;
+    public float changeTime = 5.0f;
     float timeCount;
 
     void Update()
@@ -13,7 +13,7 @@ public class EnemyRandomWalk : MonoBehaviour
 
         transform.position += transform.forward * Time.deltaTime;
 
-        if (timeCount > chargeTime)
+        if (timeCount > changeTime)
         {
             Vector3 course = new Vector3(0,Random.Range(0, 360), 0);
             transform.localRotation = Quaternion.Euler(course);

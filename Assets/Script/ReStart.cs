@@ -12,7 +12,7 @@ public class ReStart : MonoBehaviour
             SceneManager.LoadScene("Title");
         }
 
-        if (other.gameObject.tag == "Ball")
+        if (other.gameObject.tag == "Ball" || other.gameObject.tag == "Enemy")
         {
             Destroy(other.gameObject);
         }
