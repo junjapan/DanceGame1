@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyTeleportation : MonoBehaviour
 {
     public float moveTime = 3.0f;
+    public float rangeX = 5.0f;
+    public float rangeZ = 5.0f;
     float time;
     float vecX;
     float vecZ;
@@ -22,8 +24,8 @@ public class EnemyTeleportation : MonoBehaviour
 
         if (time <= 0)
         {
-            vecX = Random.Range(-5.0f, 5.0f);
-            vecZ = Random.Range(-5.0f, 5.0f);
+            vecX = Random.Range(-rangeX, rangeX);
+            vecZ = Random.Range(-rangeZ, rangeZ);
             gameObject.transform.position = startPosition + new Vector3(vecX, 0.5f, vecZ);
             time = moveTime;
         }
