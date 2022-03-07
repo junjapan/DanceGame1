@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BonusScene.unity
     guid: 3bdcb65c0b55cbb48b5be7c87dbbf66f
+  - enabled: 1
+    path: Assets/Scenes/NoDance.unity
+    guid: 2869b81dec7a0dd4ea930e9ea4a8f893
   m_configObjects: {}

@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class ScreenManager : MonoBehaviour
 {
     float countTime = 0;
+    string goalFlg = "";
+    string panelAllFlg = "";
+    string spcialFlg = "";
 
     //キャンバスの左上の経過時間表示設定
     public Text timeText;
@@ -29,6 +32,11 @@ public class ScreenManager : MonoBehaviour
         return countTime;
     }
 
+    public string getGoalFlg()
+    {
+        return goalFlg;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,14 +45,32 @@ public class ScreenManager : MonoBehaviour
         timeText.text = countTime.ToString("F2");
 
         //キャンバスの右上のモーション表示設定
-        List<string> actions = motions.motionList;
-        string[] array = actions.ToArray();
-        for (int i = 0; i < array.Length; i++)
+        if (!(panelAllFlg.Equals("all")))
         {
-            motionText.text = string.Join("\n", array);
-            string danceName = array[i];
-            //            Debug.Log(danceName);
-            dancePanels.CheckDancePanel(danceName);
+            List<string> actions = motions.motionList;
+            string[] array = actions.ToArray();
+            for (int i = 0; i < array.Length; i++)
+            {
+                motionText.text = string.Join("\n", array);
+                if (array[i] == "Dance08")
+                {
+                    spcialFlg = "sp";
+                }
+                dancePanels.CheckDancePanel(array[i]);
+                panelAllFlg = dancePanels.getPanelAllFlg();
+                Debug.Log("ScreenManager panelAllFlg:" + panelAllFlg);
+            }
+            if (panelAllFlg.Equals("all"))
+            {
+                if (spcialFlg == "sp")
+                {
+                    goalFlg = "clear";
+                }
+                else
+                {
+                    goalFlg = "ok";
+                }
+            }
         }
 
 
